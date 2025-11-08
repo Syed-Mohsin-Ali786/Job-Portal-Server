@@ -1,12 +1,12 @@
-import "./config/instrument.ts";
+import "./config/instrument.js";
 import express from "express";
 import cors from "cors";
 import type { Request, Response } from "express";
 import dotenvx from "@dotenvx/dotenvx";
 import helmet from "helmet";
-import connectDB from "./config/db.ts";
+import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
-import { clerkWebhooks } from "./controllers/webhooks.ts";
+import { clerkWebhooks } from "./controllers/webhooks.js";
 dotenvx.config();
 
 // Initialize Express
