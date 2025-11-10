@@ -7,6 +7,8 @@ import helmet from "helmet";
 import connectDB from "./config/db.js";
 import * as Sentry from "@sentry/node";
 import { clerkWebhooks } from "./controllers/webhooks.js";
+import companyRoutes from "./routes/companyRoutes.js";
+import connectCloudinary from "./config/cloudinay.js";
 dotenvx.config();
 
 // Initialize Express
@@ -14,6 +16,7 @@ const app = express();
 
 // connect to DataBase
 await connectDB();
+await connectCloudinary();
 
 // Middleware
 app.use(cors());
@@ -26,8 +29,8 @@ app.get("/", (req: Request, res: Response): void => {
 });
 
 // for clerkwebhook
-app.post('/webhooks',clerkWebhooks)
-
+app.post("/webhooks", clerkWebhooks);
+app.use("/api/company", companyRoutes);
 // sentry for checking
 Sentry.setupExpressErrorHandler(app);
 // Port
