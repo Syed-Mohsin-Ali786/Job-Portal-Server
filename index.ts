@@ -37,10 +37,10 @@ app.get("/", (req: Request, res: Response): void => {
 app.post("/webhooks", clerkWebhooks);
 app.use("/api/company", companyRoutes);
 app.use("/api/jobs",jobRoutes);
-app.use("/api/user",userRoutes)
+app.use("/api/users",userRoutes)
 
 // Error Check
-app.use(errorHandler);
+// app.use(()=>errorHandler);
 
 // sentry for checking
 Sentry.setupExpressErrorHandler(app);

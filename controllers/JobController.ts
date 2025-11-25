@@ -12,7 +12,7 @@ export const getJobs = async (
       path: "companyId",
       select: "-password",
     });
- 
+    
     res.json({
       success: true,
       jobs,

@@ -18,7 +18,7 @@ const router = express.Router();
 router.post("/register", upload.single("image"), registerCompany);
 
 // Company login
-router.post("/login", protectCompany, loginCompany);
+router.post("/login", loginCompany);
 
 // Get company data
 router.get("/company-data", protectCompany, getCompanyData);
