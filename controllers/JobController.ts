@@ -29,11 +29,13 @@ export const getJobById = async (
   next: NextFunction
 ) => {
   try {
-    const id = req.params;
+    const {id} = req.params;
+    
     const job = await Job.findById(id).populate({
         path:'companyId',
         select:'-password'
     });
+    
     if (!job) {
       return res.json({
         success: false,

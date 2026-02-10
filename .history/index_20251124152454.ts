@@ -14,28 +14,6 @@ import jobRoutes from "./routes/jobRoutes.js"
 import userRoutes from "./routes/userRoutes.js"
 import { clerkMiddleware } from "@clerk/express";
 dotenvx.config();
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAne7cLNWTWPYHpy3OT8BC9D2PVLHsS-dU",
-  authDomain: "job-portal-2e4c0.firebaseapp.com",
-  projectId: "job-portal-2e4c0",
-  storageBucket: "job-portal-2e4c0.firebasestorage.app",
-  messagingSenderId: "353884136734",
-  appId: "1:353884136734:web:b7876a64309352561d950f",
-  measurementId: "G-1C24R457XL"
-};
-
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(firebaseApp);
-
 
 // Initialize Express
 const app = express();
@@ -62,7 +40,7 @@ app.use("/api/jobs",jobRoutes);
 app.use("/api/users",userRoutes)
 
 // Error Check
-app.use(()=>errorHandler);
+// app.use(()=>errorHandler);
 
 // sentry for checking
 Sentry.setupExpressErrorHandler(app);

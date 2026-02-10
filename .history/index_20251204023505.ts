@@ -62,7 +62,7 @@ app.use("/api/jobs",jobRoutes);
 app.use("/api/users",userRoutes)
 
 // Error Check
-app.use(()=>errorHandler);
+// app.use(()=>errorHandler);
 
 // sentry for checking
 Sentry.setupExpressErrorHandler(app);

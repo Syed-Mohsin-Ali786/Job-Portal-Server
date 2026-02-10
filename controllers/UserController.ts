@@ -10,9 +10,6 @@ export const getUserData = async (
   res: Response,
   next: NextFunction
 ) => {
-  res.json({
-    message:"From user Side"
-  })
   const userId = req.auth.userId;
   
   if (!userId) {

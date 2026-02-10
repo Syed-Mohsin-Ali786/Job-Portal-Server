@@ -1,0 +1,19 @@
+[debug] [2025-12-03T21:15:31.699Z] ----------------------------------------------------------------------
+[debug] [2025-12-03T21:15:31.702Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TECHNIFI\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-12-03T21:15:31.705Z] CLI Version:   14.26.0
+[debug] [2025-12-03T21:15:31.705Z] Platform:      win32
+[debug] [2025-12-03T21:15:31.705Z] Node Version:  v22.14.0
+[debug] [2025-12-03T21:15:31.706Z] Time:          Thu Dec 04 2025 02:15:31 GMT+0500 (Pakistan Standard Time)
+[debug] [2025-12-03T21:15:31.707Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\60 Days Challenge\Day 29–33 Job Board Platform\Server
+

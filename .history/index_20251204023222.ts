@@ -33,8 +33,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(firebaseApp);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 
 // Initialize Express
@@ -62,7 +62,7 @@ app.use("/api/jobs",jobRoutes);
 app.use("/api/users",userRoutes)
 
 // Error Check
-app.use(()=>errorHandler);
+// app.use(()=>errorHandler);
 
 // sentry for checking
 Sentry.setupExpressErrorHandler(app);
